@@ -15,8 +15,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page d'aministration</title>
-    <link rel="stylesheet" href="/tp_php_v1/web/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/tp_php_v1/web/css/main.css">
+    <link rel="stylesheet" href="/Cornillon/tp_php_v1/web/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/Cornillon/tp_php_v1/web/css/main.css">
 </head>
 
 <body>

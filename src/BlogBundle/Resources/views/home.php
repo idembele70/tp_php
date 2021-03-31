@@ -5,8 +5,8 @@
   <meta charset="utf-8">
   <link rel="shortcut icon" href="favicon.png" type="image/png">
   <title>TP PHP Blog</title>
-  <link rel="stylesheet" href="/tp_php_v1/web/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/tp_php_v1/web/css/main.css">
+  <link rel="stylesheet" href="/Cornillon/tp_php_v1/web/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/Cornillon/tp_php_v1/web/css/main.css">
 </head>
 
 <body>

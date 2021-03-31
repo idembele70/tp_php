@@ -96,7 +96,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
-    <link rel="stylesheet" href="/tp_php_v1/web/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/Cornillon/tp_php_v1/web/css/bootstrap.min.css">
     <style type="text/css">
         body {
             font: 14px sans-serif;

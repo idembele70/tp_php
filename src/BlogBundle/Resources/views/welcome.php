@@ -16,8 +16,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <meta charset="UTF-8">
     <title>Bienvenue</title>
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css"> -->
-    <link rel="stylesheet" href="/tp_php_v1/web/css/main.css">
-    <link rel="stylesheet" href="/tp_php_v1/web/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/Cornillon/tp_php_v1/web/css/main.css">
+    <link rel="stylesheet" href="/Cornillon/tp_php_v1/web/css/bootstrap.min.css">
     <style type="text/css">
         body {
             font: 14px sans-serif;
