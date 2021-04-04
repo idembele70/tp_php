@@ -26,7 +26,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     </div>
     <div class="containeur-fluid">
         <form action="pageArticle.php" method="post">
-            <div class="form-group col-6 col-md-4">
+            <div class="form-group col-8 mx-auto">
                 <label for="exampleFormControlInput1">Titre</label>
                 <input type="disabled" class="form-control" id="exampleFormControlInput1" name="titre">
                 <label for="exampleFormControlInput1">Auteur</label>
@@ -36,13 +36,13 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 <label for="exampleFormControlInput1">Catégorie</label>
                 <input type="disabled" class="form-control" id="exampleFormControlInput1" name="categorie">
             </div>
-            <div class="form-group col-8">
+            <div class="form-group col-8 mx-auto">
                 <label for="exampleFormControlTextarea1">Contenue</label>
                 <textarea class="form-control" name="content" id="exampleFormControlTextarea1" rows="5"></textarea>
+                <button type="submit" name="valider" class="btn btn-success my-2 mx-auto">Ajouter</button>
             </div>
-            
-                <button type="submit" name="valider" class="btn btn-success" >Ajouter</button>
-            
+
+
         </form>
 
     </div>
@@ -56,8 +56,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
         $date = date("y-m-d");
 
-        define( '__ROOT__', dirname('../../../../app/config/mysqli_connect.php'));
-        require_once( __ROOT__ . '/mysqli_connect.php');
+        define('__ROOT__', dirname('../../../../app/config/mysqli_connect.php'));
+        require_once(__ROOT__ . '/mysqli_connect.php');
 
         $sql = "INSERT INTO article(title, author, category, content, createdAt, createdBy) VALUES ('" . $titre . "', '" . $auteur . "', '" . $categorie . "', '" . $content . "', '" . $date . "', '" . $createdBy . "')";
 
@@ -66,7 +66,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         } else {
             echo "Erreur" . $sql . mysqli_error($dbc);
         }
-        
     }
     ?>
 

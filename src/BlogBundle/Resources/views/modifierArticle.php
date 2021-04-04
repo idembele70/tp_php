@@ -1,7 +1,7 @@
 <?php
 
- define( '__ROOT__', dirname('../../../../app/config/mysqli_connect.php'));
- require_once( __ROOT__ . '/mysqli_connect.php');
+define('__ROOT__', dirname('../../../../app/config/mysqli_connect.php'));
+require_once(__ROOT__ . '/mysqli_connect.php');
 
 $id = $_REQUEST['id'];
 
@@ -51,7 +51,7 @@ $row = mysqli_fetch_assoc($result);
         <div class="container-fluid">
 
             <form method="post" action="modifierArticle.php">
-                <div class="form-group col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 ">
+                <div class="form-group col-8 col-sm-8 col-md-8 col-lg-8 mx-auto">
                     <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
                     <label for="exampleFormControlInput1">Titre</label>
                     <input type="text" value="<?php echo $row['title']; ?>" name="title" class="form-control" id="exampleFormControlInput1">
@@ -61,12 +61,12 @@ $row = mysqli_fetch_assoc($result);
                     <input type="text" value="<?php echo $row['category']; ?>" name="category" class="form-control" id="exampleFormControlInput1">
                 </div>
 
-                <div class="form-group col-8 col-sm-8 col-md-8 col-lg-8 ">
+                <div class="form-group col-8 col-sm-8 col-md-8 col-lg-8 mx-auto">
                     <label for="exampleFormControlTextarea1">Contenu</label>
                     <textarea class="form-control" name="content" id="exampleFormControlTextarea1" rows="5"><?php echo $row['content'] ?></textarea>
+                    <button type="submit" name="update" class="btn btn-success mx-0 my-3">modifier</button>
                 </div>
-
-                <button  type="submit" name="update"  class="btn btn-success">modifier</button>
+                
             </form>
         </div>
     <?php }

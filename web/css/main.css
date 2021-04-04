@@ -12,7 +12,20 @@ body {
 .container {
   margin-top: 50px;
 }
-
+article {
+  height: 250px;
+  position: relative;
+}
+.content {
+  height: 115px;
+  overflow: scroll;
+}
+article button{
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
 .wrapper {
   margin-top: 70px;
   display: flex;

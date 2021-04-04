@@ -17,8 +17,7 @@ nav{
 
 nav::after{
     display: block;
-    margin-left: 150px;
-    margin-top: 10px;
+    margin: 10px auto 0;
     content: "";
     width: 30px;
     height: 30px;
@@ -57,5 +56,5 @@ nav > ul > li {
 
 nav > ul > li:hover {
     color: #598;
-    font-size: 0.9rem;
+    /* font-size: 0.9rem; */
 }

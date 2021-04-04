@@ -1,7 +1,6 @@
 <?php
 // Initialize the session
 session_start();
-
 // Check if the user is logged in, if not then redirect him to login page
 if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     header("location: login.php");
@@ -22,42 +21,35 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 <body>
     <div class="wrapper">
         <?php include 'nav.php'; ?>
-
-
         <div class="articles">
-
             <?php
-            define( '__ROOT__', dirname('../../../../app/config/mysqli_connect.php'));
-            require_once( __ROOT__ . '/mysqli_connect.php'); ?>
+            define('__ROOT__', dirname('../../../../app/config/mysqli_connect.php'));
+            require_once(__ROOT__ . '/mysqli_connect.php'); ?>
             <div class="container">
                 <div class="row">
                     <?php
                     $query = "SELECT * FROM article";
                     $response = @mysqli_query($dbc, $query);
                     if ($response) {
-
                         while ($row = mysqli_fetch_array($response)) {
                             $username = $_SESSION["username"];
                             $createdBy = $row['createdBy'];
                             if ($username == $createdBy) {
-
                     ?>
-                                <article class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                                <article class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 border border-3">
                                     <h1><?php echo $row['title']; ?></h1>
-                                    <div class="meta-data">
+                                    <div class="meta-data my-1">
                                         <span class="author">Auteur: <?php echo $row['author']; ?></span> -
                                         <span class="category">Catégorie: <?php echo $row['category']; ?></span> -
                                         <span class="creation-date">Date de création: <?php echo $row['createdAt']; ?></span> -
                                         <span class="creation-by">createdBy: <?php echo $row['createdBy']; ?></span>
                                     </div>
-                                    <p><?php echo $row['content']; ?></p>
-                                    <p align="center">
+                                    <p class="m-0 content"><?php echo $row['content']; ?></p>
+                                    <p class="m-0" align="center">
                                         <a class="btn btn-success" href="modifierArticle.php?id=<?php echo $row['id']; ?>">Modifier</a>
                                         <a class="btn btn-danger" href="delete.php?id=<?php echo $row['id']; ?>">Supprimer</a>
                                     </p>
                                 </article>
-
-
                     <?php    }
                         }
                     }  ?>

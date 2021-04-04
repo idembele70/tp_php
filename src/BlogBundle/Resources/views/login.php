@@ -10,8 +10,8 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
 
 // Include config file
 
-define( '__ROOT__', dirname('../../../../app/config/mysqli_connect.php'));
-require_once( __ROOT__ . '/mysqli_connect.php');
+define('__ROOT__', dirname('../../../../app/config/mysqli_connect.php'));
+require_once(__ROOT__ . '/mysqli_connect.php');
 
 // Define variables and initialize with empty values
 $username = $password = "";
@@ -110,10 +110,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 <body>
-    <div class="container-fluid col-4">
-        <h2>Page de connection</h2>
-        <p>Veuillez vous identifier</p>
-        <div class="col-8 col-sm-9 ">
+    <div class="container-fluid">
+        <div class="col-8 mx-auto">
+            <h2>Page de connection</h2>
+            <p>Veuillez vous identifiez</p>
+        </div>
+        <div class="col-8 mx-auto">
             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                 <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
                     <label>Nom d'utilisateur</label>
@@ -128,9 +130,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <div class="form-group">
                     <input type="submit" class="btn btn-primary" value="se connecter">
                 </div>
-                
+
                 <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="register.php">Créez un compte </a>
+                <p>Vous n'avez pas de compte ? <a href="register.php">Créez un compte </a></p>
                 <div class="dropdown-divider"></div>
             </form>
         </div>
