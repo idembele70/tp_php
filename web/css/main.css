@@ -16,42 +16,10 @@ body {
 .row-toggle{
   display: none;
 }
-article {
-  height: 250px;
-  position: relative;
-}
-.article-toggle{
-  height: auto;
-}
-.article-toggle .content {
-  height: auto;
-  overflow:initial;
-}
-.content {
-  height: 115px;
-  overflow-y: scroll;
-}
-article button{
-  position: absolute;
-  bottom: 5px;
-  margin-top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-}
+
 .wrapper {
   margin-top: 70px;
   display: flex;
   justify-content: center;
 }
 
-.btn-success {
-  margin-left: 5px;
-}
-.btn-toggle{
-  display: none;
-}
-.close {
-  position: absolute;
-  top: 0;
-  right: 0;
-}

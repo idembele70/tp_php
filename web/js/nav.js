@@ -1,13 +1,14 @@
 // selector & variable
 const controlsNav = document.querySelector('nav');
-let row;
+let row, btnLirePlus;
 
 // event listener
 controlsNav.addEventListener('click', toggleNav, false);
 
 // function
-function enable(btn = controlsNav) {
-    btn.classList.toggle('btn-toggle')
+function enable(btn) {
+    btnLirePlus = btn;
+    btnLirePlus.classList.toggle('btn-toggle')
      row = document.querySelector('div > .row')
     const btnClone = btn.parentNode.cloneNode(true);
     btnClone.classList.toggle("article-toggle");
@@ -17,13 +18,14 @@ function enable(btn = controlsNav) {
     const txt = document.createTextNode("\u00D7");
     span.className = "close";
     span.appendChild(txt);
-    span.setAttribute('onClick', 'enabled(this)')
+    span.setAttribute('onClick', 'enabled(this)');
     btnClone.appendChild(span);
     btn.parentElement.style.display = 'initial';
+    document.documentElement.scrollTop = 0;
 }
-function enabled(btn) {
+function enabled(span) {
     row.classList.toggle('row-toggle');
-    btn.parentElement.style.display = 'none';
-    console.log(this.lastChild);
+    span.parentElement.style.display = 'none';
+    btnLirePlus.classList.toggle('btn-toggle')
 }
 function toggleNav() { controlsNav.classList.toggle('enabled'); }

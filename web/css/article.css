@@ -23,3 +23,39 @@
     article p a {
       text-align: center;
     }
+
+    article {
+      height: 250px;
+      position: relative;
+    }
+    .article-toggle{
+      height: auto;
+    }
+    .article-toggle .content {
+      height: auto;
+      overflow:initial;
+    }
+    .content {
+      height: 115px;
+      overflow-y: scroll;
+    }
+    article button{
+      position: absolute;
+      bottom: 5px;
+      margin-top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .btn-success {
+      margin-left: 5px;
+    }
+    .btn-toggle{
+      display: none;
+    }
+    .close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      cursor: pointer;
+    }
