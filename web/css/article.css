@@ -30,6 +30,8 @@
     }
     .article-toggle{
       height: auto;
+      margin: 10px;
+      width: 90%;
     }
     .article-toggle .content {
       height: auto;

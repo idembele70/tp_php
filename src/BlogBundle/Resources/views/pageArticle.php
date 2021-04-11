@@ -26,7 +26,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     </div>
     <div class="containeur-fluid">
         <form action="pageArticle.php" method="post">
-            <div class="form-group col-8 mx-auto">
+            <div class="form-group col-8 col-sm-6 col-md-5 col-lg-5 mx-auto">
                 <label for="exampleFormControlInput1">Titre</label>
                 <input type="disabled" class="form-control" id="exampleFormControlInput1" name="titre">
                 <label for="exampleFormControlInput1">Auteur</label>
@@ -36,7 +36,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 <label for="exampleFormControlInput1">Catégorie</label>
                 <input type="disabled" class="form-control" id="exampleFormControlInput1" name="categorie">
             </div>
-            <div class="form-group col-8 mx-auto">
+            <div class="form-group col-8 col-sm-6 col-md-5 col-lg-5 mx-auto">
                 <label for="exampleFormControlTextarea1">Contenue</label>
                 <textarea class="form-control" name="content" id="exampleFormControlTextarea1" rows="5"></textarea>
                 <button type="submit" name="valider" class="btn btn-success my-2 mx-auto">Ajouter</button>
